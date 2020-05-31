@@ -1,0 +1,10 @@
+D:\Work\ChatShell\ChatShell GUI\bin\Release\ChatShell GUI.exe.config
+D:\Work\ChatShell\ChatShell GUI\bin\Release\ChatShell GUI.exe
+D:\Work\ChatShell\ChatShell GUI\bin\Release\ChatShell GUI.pdb
+D:\Work\ChatShell\ChatShell GUI\obj\Release\ChatShell GUI.csprojAssemblyReference.cache
+D:\Work\ChatShell\ChatShell GUI\obj\Release\ChatShell_GUI.Form1.resources
+D:\Work\ChatShell\ChatShell GUI\obj\Release\ChatShell_GUI.PrivateChatForm.resources
+D:\Work\ChatShell\ChatShell GUI\obj\Release\ChatShell_GUI.Properties.Resources.resources
+D:\Work\ChatShell\ChatShell GUI\obj\Release\ChatShell GUI.csproj.GenerateResource.cache
+D:\Work\ChatShell\ChatShell GUI\obj\Release\ChatShell GUI.exe
+D:\Work\ChatShell\ChatShell GUI\obj\Release\ChatShell GUI.pdb
