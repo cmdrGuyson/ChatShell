@@ -1,0 +1,41 @@
+C:\Users\Ebisu\source\repos\ChatShell\ChatShell GUI\bin\Debug\ChatShell GUI.exe.config
+C:\Users\Ebisu\source\repos\ChatShell\ChatShell GUI\bin\Debug\ChatShell GUI.exe
+C:\Users\Ebisu\source\repos\ChatShell\ChatShell GUI\bin\Debug\ChatShell GUI.pdb
+C:\Users\Ebisu\source\repos\ChatShell\ChatShell GUI\obj\Debug\ChatShell GUI.csprojAssemblyReference.cache
+C:\Users\Ebisu\source\repos\ChatShell\ChatShell GUI\obj\Debug\ChatShell_GUI.Properties.Resources.resources
+C:\Users\Ebisu\source\repos\ChatShell\ChatShell GUI\obj\Debug\ChatShell GUI.csproj.GenerateResource.cache
+C:\Users\Ebisu\source\repos\ChatShell\ChatShell GUI\obj\Debug\ChatShell GUI.exe
+C:\Users\Ebisu\source\repos\ChatShell\ChatShell GUI\obj\Debug\ChatShell GUI.pdb
+C:\Users\Ebisu\source\repos\ChatShell\ChatShell GUI\obj\Debug\ChatShell_GUI.Form1.resources
+C:\Users\Ebisu\source\repos\ChatShell\ChatShell GUI\obj\Debug\ChatShell_GUI.PrivateChatForm.resources
+D:\kg-apiit\Teaching\02-2020Mar02-2020May28\COSE50647-CNA-IF2031SE\x-studentissues\ChatShell[Gayanga_Kuruppu]\ChatShell\ChatShell GUI\bin\Debug\ChatShell GUI.exe.config
+D:\kg-apiit\Teaching\02-2020Mar02-2020May28\COSE50647-CNA-IF2031SE\x-studentissues\ChatShell[Gayanga_Kuruppu]\ChatShell\ChatShell GUI\bin\Debug\ChatShell GUI.exe
+D:\kg-apiit\Teaching\02-2020Mar02-2020May28\COSE50647-CNA-IF2031SE\x-studentissues\ChatShell[Gayanga_Kuruppu]\ChatShell\ChatShell GUI\bin\Debug\ChatShell GUI.pdb
+D:\kg-apiit\Teaching\02-2020Mar02-2020May28\COSE50647-CNA-IF2031SE\x-studentissues\ChatShell[Gayanga_Kuruppu]\ChatShell\ChatShell GUI\obj\Debug\ChatShell GUI.csprojAssemblyReference.cache
+D:\kg-apiit\Teaching\02-2020Mar02-2020May28\COSE50647-CNA-IF2031SE\x-studentissues\ChatShell[Gayanga_Kuruppu]\ChatShell\ChatShell GUI\obj\Debug\ChatShell_GUI.Form1.resources
+D:\kg-apiit\Teaching\02-2020Mar02-2020May28\COSE50647-CNA-IF2031SE\x-studentissues\ChatShell[Gayanga_Kuruppu]\ChatShell\ChatShell GUI\obj\Debug\ChatShell_GUI.PrivateChatForm.resources
+D:\kg-apiit\Teaching\02-2020Mar02-2020May28\COSE50647-CNA-IF2031SE\x-studentissues\ChatShell[Gayanga_Kuruppu]\ChatShell\ChatShell GUI\obj\Debug\ChatShell_GUI.Properties.Resources.resources
+D:\kg-apiit\Teaching\02-2020Mar02-2020May28\COSE50647-CNA-IF2031SE\x-studentissues\ChatShell[Gayanga_Kuruppu]\ChatShell\ChatShell GUI\obj\Debug\ChatShell GUI.csproj.GenerateResource.cache
+D:\kg-apiit\Teaching\02-2020Mar02-2020May28\COSE50647-CNA-IF2031SE\x-studentissues\ChatShell[Gayanga_Kuruppu]\ChatShell\ChatShell GUI\obj\Debug\ChatShell GUI.csproj.CoreCompileInputs.cache
+D:\kg-apiit\Teaching\02-2020Mar02-2020May28\COSE50647-CNA-IF2031SE\x-studentissues\ChatShell[Gayanga_Kuruppu]\ChatShell\ChatShell GUI\obj\Debug\ChatShell GUI.exe
+D:\kg-apiit\Teaching\02-2020Mar02-2020May28\COSE50647-CNA-IF2031SE\x-studentissues\ChatShell[Gayanga_Kuruppu]\ChatShell\ChatShell GUI\obj\Debug\ChatShell GUI.pdb
+C:\Users\Ebisu\Desktop\ChatShell[Gayanga_Kuruppu]\ChatShell[Gayanga_Kuruppu]\ChatShell\ChatShell GUI\bin\Debug\ChatShell GUI.exe.config
+C:\Users\Ebisu\Desktop\ChatShell[Gayanga_Kuruppu]\ChatShell[Gayanga_Kuruppu]\ChatShell\ChatShell GUI\bin\Debug\ChatShell GUI.exe
+C:\Users\Ebisu\Desktop\ChatShell[Gayanga_Kuruppu]\ChatShell[Gayanga_Kuruppu]\ChatShell\ChatShell GUI\bin\Debug\ChatShell GUI.pdb
+C:\Users\Ebisu\Desktop\ChatShell[Gayanga_Kuruppu]\ChatShell[Gayanga_Kuruppu]\ChatShell\ChatShell GUI\obj\Debug\ChatShell GUI.csprojAssemblyReference.cache
+C:\Users\Ebisu\Desktop\ChatShell[Gayanga_Kuruppu]\ChatShell[Gayanga_Kuruppu]\ChatShell\ChatShell GUI\obj\Debug\ChatShell_GUI.Form1.resources
+C:\Users\Ebisu\Desktop\ChatShell[Gayanga_Kuruppu]\ChatShell[Gayanga_Kuruppu]\ChatShell\ChatShell GUI\obj\Debug\ChatShell_GUI.PrivateChatForm.resources
+C:\Users\Ebisu\Desktop\ChatShell[Gayanga_Kuruppu]\ChatShell[Gayanga_Kuruppu]\ChatShell\ChatShell GUI\obj\Debug\ChatShell_GUI.Properties.Resources.resources
+C:\Users\Ebisu\Desktop\ChatShell[Gayanga_Kuruppu]\ChatShell[Gayanga_Kuruppu]\ChatShell\ChatShell GUI\obj\Debug\ChatShell GUI.csproj.GenerateResource.cache
+C:\Users\Ebisu\Desktop\ChatShell[Gayanga_Kuruppu]\ChatShell[Gayanga_Kuruppu]\ChatShell\ChatShell GUI\obj\Debug\ChatShell GUI.exe
+C:\Users\Ebisu\Desktop\ChatShell[Gayanga_Kuruppu]\ChatShell[Gayanga_Kuruppu]\ChatShell\ChatShell GUI\obj\Debug\ChatShell GUI.pdb
+D:\Work\ChatShell\ChatShell GUI\bin\Debug\ChatShell GUI.exe.config
+D:\Work\ChatShell\ChatShell GUI\bin\Debug\ChatShell GUI.exe
+D:\Work\ChatShell\ChatShell GUI\bin\Debug\ChatShell GUI.pdb
+D:\Work\ChatShell\ChatShell GUI\obj\Debug\ChatShell GUI.csprojAssemblyReference.cache
+D:\Work\ChatShell\ChatShell GUI\obj\Debug\ChatShell_GUI.Form1.resources
+D:\Work\ChatShell\ChatShell GUI\obj\Debug\ChatShell_GUI.PrivateChatForm.resources
+D:\Work\ChatShell\ChatShell GUI\obj\Debug\ChatShell_GUI.Properties.Resources.resources
+D:\Work\ChatShell\ChatShell GUI\obj\Debug\ChatShell GUI.csproj.GenerateResource.cache
+D:\Work\ChatShell\ChatShell GUI\obj\Debug\ChatShell GUI.exe
+D:\Work\ChatShell\ChatShell GUI\obj\Debug\ChatShell GUI.pdb
