@@ -83,6 +83,7 @@
             // 
             // richTextBox1
             // 
+            this.richTextBox1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(12, 12);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
@@ -102,26 +103,23 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.button1);
-            this.splitContainer2.Size = new System.Drawing.Size(485, 28);
+            this.splitContainer2.Size = new System.Drawing.Size(485, 25);
             this.splitContainer2.SplitterDistance = 383;
             this.splitContainer2.TabIndex = 0;
             // 
             // textBox1
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(383, 28);
+            this.textBox1.Size = new System.Drawing.Size(383, 20);
             this.textBox1.TabIndex = 0;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // button1
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 28);
+            this.button1.Size = new System.Drawing.Size(98, 20);
             this.button1.TabIndex = 0;
             this.button1.Text = "Send";
             this.button1.UseVisualStyleBackColor = true;
@@ -134,6 +132,7 @@
             this.ClientSize = new System.Drawing.Size(509, 450);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.statusStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PrivateChatForm";
             this.Text = "PrivateChatForm";

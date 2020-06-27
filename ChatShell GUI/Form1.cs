@@ -5,24 +5,21 @@
  */
 
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Net.Sockets;
 using System.Text;
 using System.Collections;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ChatShell_GUI
 {
-    public partial class Form1 : Form
+    public partial class MainClientForm : Form
     {
         // Varibales to store TcpClient object and NetworkStream
         private TcpClient client;
         private NetworkStream broadcastStream;
+        private Encryptor encryptor;
 
         // Hashtable containing all private chats that were started
         private Hashtable activeChats = new Hashtable();
@@ -31,17 +28,24 @@ namespace ChatShell_GUI
         private string username;
 
         // If connected to server
-        private bool connected = false;
+        private bool connected;
 
-        public Form1()
+        
+
+        public MainClientForm()
         {
             InitializeComponent();
             // Setting initial values and making sure backgroundWorker can report progress and is allowed to cancel
             client = null;
             broadcastStream = null;
+            connected = false;
+            encryptor = new Encryptor(8);
             backgroundWorker1.WorkerReportsProgress = true;
             backgroundWorker1.WorkerSupportsCancellation = true;
             // ================================================
+
+            textBox1.AutoSize = false;
+            textBox1.Size = new System.Drawing.Size(384, 29);
         }
 
 
@@ -68,13 +72,16 @@ namespace ChatShell_GUI
 
                         /* Send client username to server */
                         broadcastStream = client.GetStream();
-                        byte[] outStream = Encoding.ASCII.GetBytes(username);
+                        byte[] outStream = Encoding.ASCII.GetBytes(encryptor.encrypt("PASS"+username));
                         broadcastStream.Write(outStream, 0, outStream.Length);
 
                         /* Recive information whether client accepted connection */
                         byte[] inStream = new byte[100];
                         int bytesRead = broadcastStream.Read(inStream, 0, inStream.Length);
                         string serverData = Encoding.ASCII.GetString(inStream, 0, bytesRead);
+
+                        /* Decrypt data recieved */
+                        serverData = encryptor.decrypt(serverData);
 
                         // If client accepts connection
                         if (serverData.Equals("!connect"))
@@ -115,8 +122,8 @@ namespace ChatShell_GUI
                     // Cancel backgroundWorker asynchronously
                     backgroundWorker1.CancelAsync();
 
-                    // Send message to the server to disconnect from it
-                    byte[] outStream = Encoding.ASCII.GetBytes("!exit");
+                    // Send message to the server to disconnect from it after encrypting message
+                    byte[] outStream = Encoding.ASCII.GetBytes(encryptor.encrypt("!exit"));
                     broadcastStream.Write(outStream, 0, outStream.Length);
                     broadcastStream.Flush();
 
@@ -132,7 +139,15 @@ namespace ChatShell_GUI
         /* When 'send' is clicked */
         private void button1_Click(object sender, EventArgs e)
         {
-            sendMessage();
+            // If connected to server send the message else display error
+            if (connected)
+            {
+                sendMessage();
+            }
+            else
+            {
+                MessageBox.Show("Connect to the server first!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         /* Recieve messages in the background */
@@ -151,6 +166,9 @@ namespace ChatShell_GUI
                 // Recive messages from the server
                 bytesRead = broadcastStream.Read(inStream, 0, inStream.Length);
                 returndata = Encoding.ASCII.GetString(inStream, 0, bytesRead);
+
+                // Decrypt message
+                returndata = encryptor.decrypt(returndata);
 
                 // If message is a command
                 if (returndata.StartsWith("!users")|| returndata.StartsWith("!pm")|| returndata.StartsWith("!dc") || returndata.StartsWith("!rc"))
@@ -190,19 +208,22 @@ namespace ChatShell_GUI
                 {
                     MessageBox.Show("You are not allowed to send messages starting with '!'", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-
-                try
+                //If the string doesnt only contain whitespaces
+                else if (message.Replace(" ", "").Length!=0)
                 {
-                    // Send the message to the server using the network strean asynchronously
-                    byte[] outStream = Encoding.ASCII.GetBytes(message);
-                    await broadcastStream.WriteAsync(outStream, 0, outStream.Length);
+                    try
+                    {
+                        // Send the message to the server after encrypting using the network strean asynchronously
+                        byte[] outStream = Encoding.ASCII.GetBytes(encryptor.encrypt(message));
+                        await broadcastStream.WriteAsync(outStream, 0, outStream.Length);
 
-                    // Clear the text box
-                    textBox1.Clear();
-                }
-                catch (Exception exc)
-                {
-                    MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        // Clear the text box
+                        textBox1.Clear();
+                    }
+                    catch (Exception exc)
+                    {
+                        MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
             }
         }
@@ -214,8 +235,8 @@ namespace ChatShell_GUI
             {
                 try
                 {
-                    // Send the message to the server using the network strean asynchronously
-                    byte[] outStream = Encoding.ASCII.GetBytes(message);
+                    // Send the message to the server using the network strean asynchronously after encryption
+                    byte[] outStream = Encoding.ASCII.GetBytes(encryptor.encrypt(message));
                     await broadcastStream.WriteAsync(outStream, 0, outStream.Length);
                 }
                 catch (Exception exc)
@@ -225,7 +246,7 @@ namespace ChatShell_GUI
             }
         }
 
-        /* WHen enter is pressed */
+        /* When enter key is pressed */
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             // If enter is pressed while focused on the text box send the message
@@ -366,6 +387,62 @@ namespace ChatShell_GUI
                     privateForm.showForm();
                 }
             }
+        }
+    }
+
+    // Class to encrypt and decrypt messages using simple Caesar Cipher
+    public class Encryptor
+    {
+        private int key;
+
+        public Encryptor(int key)
+        {
+            this.key = key;
+        }
+
+        private char cipher(char ch)
+        {
+            if (!char.IsLetter(ch))
+            {
+
+                return ch;
+            }
+
+            char d = char.IsUpper(ch) ? 'A' : 'a';
+            return (char)((((ch + key) - d) % 26) + d);
+        }
+
+        private char decipher(char ch)
+        {
+            int shift = 26 - key;
+
+            if (!char.IsLetter(ch))
+            {
+
+                return ch;
+            }
+            char d = char.IsUpper(ch) ? 'A' : 'a';
+            return (char)((((ch + shift) - d) % 26) + d);
+        }
+
+        public string encrypt(string input)
+        {
+            string output = string.Empty;
+
+            foreach (char ch in input)
+                output += cipher(ch);
+
+            return output;
+        }
+
+        public string decrypt(string input)
+        {
+            string output = string.Empty;
+
+            foreach (char ch in input)
+                output += decipher(ch);
+
+            return output;
         }
     }
 }
