@@ -1,5 +1,7 @@
 # ChatShell
 
+`All rights for the source code and other related material are reserved`
+
 Client-Server chat application
 
 ## Server
